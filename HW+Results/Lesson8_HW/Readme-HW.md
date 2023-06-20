@@ -1,0 +1,8 @@
+Перед выполнением задания необходимо:
+Создать страницу user_info.html на домене localhost
+Добавить на домене localhost заголовок CORS: Access-Control-Allow-Origin: * На домене attacker.com создать страницу, которая:
+Выполнит XHR запрос за страницей localhost/user_info.html
+Выведет содержимое страницы user_info.html Настройте CORS так, чтобы вывести содержимое страницы user_info.html мог только http://localhost или http://trustedhost.com.
+Вы - злоумышленник, поэтому в Firefox вы заходите только через приватное окно. Вы хотите украсть супер секретные данные со страницы http://victim.com/hw-8-2.php. На ней установлена защита по сессии. Но вы знаете пользователя у которого эта сессия есть и что секрет отдается postMessage после открытия страницы…
+Заманите пользователя на страницу http://attacker.com/hw-8-2-attacker.html и получите секретные данные.
+Допишите страницу http://victim.com/hw-8-2.php, так чтобы она была безопасной. Страница hw-8-2.php <?php if ($_COOKIE['sessionid'] == '0a7016d5f7346a6f14b273a66e0770fb7d6608769f233156570e878a1397a175') { echo "<body> Hello, sir! Sending data to window.opener! <script> window.opener.postMessage('TOP secret data', '*'); </script> </body>"; } else { echo "Access denied"; } ?> 3 () Пройти RCE (os command injection) на bWAPP 4 () Пройти WebStorage на bWAPP (A-6 webstorage) Задания необходимо сдавать в формате скриншотов, которые сопровождаются комментариями. Отчет должен быть в pdf формате. Пожалуйста, пишите в названии pdf файла домашнего задания своё имя.
